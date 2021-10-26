@@ -1,0 +1,15 @@
+jusqu'à maintenant => Application Angular MONOPAGE 
+
+réaliser un site qui contient plusieurs pages 
+barre de menu => page d'accueil
+page de contact => 
+1 seul article 
+page de connexion 
+back office .... 
+
+// créer un composant menu 
+// ajouter liste => qui 3 items 
+    Accueil / Contact / Connexion 
+// ajouter ce menu en haut de la page ! 
+
+                

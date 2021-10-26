@@ -28,7 +28,6 @@ import { HttpClient } from "@angular/common/http"
 })
 export class ContactComponent implements OnInit {
   public titre : string = "Nous contacter";
-
   public onSubmit(contact :NgForm){
     if(contact.valid){
       this.req.post( "http://localhost:3000/contacts" , contact.value )
@@ -39,11 +38,8 @@ export class ContactComponent implements OnInit {
           )
     }
   }
-
   constructor(private req : HttpClient) { }
-
-  ngOnInit(): void {
-  }
+  ngOnInit(): void {}
 
 }
 // ajouter dans ce composant un formulaire
@@ -52,3 +48,4 @@ export class ContactComponent implements OnInit {
 
 // lorsque vous le soumettez => appeler la base de données en POST 
 // ajouter un nouvel enregistrement 
+// rdv 16h25 bon café @ toute suite !! 

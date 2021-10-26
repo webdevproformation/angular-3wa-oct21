@@ -17,7 +17,7 @@ interface UserInterface {
     <h1>{{ titre }}</h1>
     <div>
       <article *ngFor="let a of articles">
-        <h2>{{ a.nom }}</h2>
+        <h2><a [routerLink]="['article', a.id]">{{ a.nom }}</a></h2>
         <p>{{ a.contenu }}</p>
         <ul>
           <li>{{a.auteur}}</li>

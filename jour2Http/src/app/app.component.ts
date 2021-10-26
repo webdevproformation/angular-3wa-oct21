@@ -15,6 +15,7 @@ interface UserInterface {
   selector: 'app-root',
   template: `
     <div class="container">
+      <app-exo></app-exo>
       <h1>{{ title }}</h1>
       <section>
         <button (click)="onClickGetAll()">récupérer tous les users</button>
@@ -145,5 +146,5 @@ export class AppComponent {
 
   // exo 1 => afficher la liste de tous les commentaires pour les user actif ( status : true)
   // exo 2 => afficher pour chaque utilisateur profil id / nom / status / commentaires [ avec tous les commentaires de ce user ]
-
+  // rdv 14h00 bon appétit @ toute suite !!! 
 }

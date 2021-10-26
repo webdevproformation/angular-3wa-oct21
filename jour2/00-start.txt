@@ -9,6 +9,8 @@ login : angular
 passwd : google
 
 https://github.com/webdevproformation/angular-3wa-sept21
+https://github.com/webdevproformation/angular-3wa-oct21
+
 
 
 // -------------------- 

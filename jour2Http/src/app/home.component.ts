@@ -24,8 +24,7 @@ interface UserInterface {
           <li><a routerLink="article/{{a.id}}">lire la suite</a></li>
         </ul>
       </article>
-    </div>
-  `,
+    </div>`,
   styles: [
     `div{
       display:grid;

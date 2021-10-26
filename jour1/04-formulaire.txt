@@ -1,0 +1,42 @@
+Dans Angular 2 manières de gérer les formulaires 
+
+Template Driven Form : gérer vos formulaires via des attributs (Directive) dans votre formulaire
+Reactive Form : gérer vos formulaires directement dans la class 
+
+ng g c start/template-driven 
+
+app.component.html ajouter <app-template-driven></app-template-driven> 
+
+// ----------------------- 
+
+Directive ngModel dans notre formulaire 
+
+// app.module.ts
+
+// récupérer les valeurs saisies dans les champs du formulaire 
+// effectuer des vérifications => est ce que la personne a bien rempli les deux champs 
+
+// ajouter des attributs (directives) dans les balises <input> 
+// ajouter des attributs (directives) dans la balise form 
+
+// exo cas pratique 
+// créer un nouveau composant :  questionnaire => dans le dossier start 
+
+qui contient un formulaire de  3 champs :
+
+1 input de type email 
+2 menu déroulant select avec 3 valeurs : France / Allemagne / Belgique
+3 input de type radio box novice / intermédiaire / expert 
+4 bouton de soumission 
+
+lorsque l'on soumet ce formulaire => 
+récupérer les valeurs des 3 champs et vérifier que ces champs sont bien remplis 
+pour le champs email contenir en plus au minimum 5 caractères 
+
+// créer le composant ng g c start/reactive 
+// ajouter dans le fichier app.module.ts 
+
+
+
+
+

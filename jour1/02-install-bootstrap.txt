@@ -1,0 +1,28 @@
+installer bootstrap 
+
+lancer la commande 
+npm i bootstrap
+
+// modifier le fichier de config angular.json
+
+"styles": [
+    "./node_modules/bootstrap/dist/css/bootstrap.min.css",
+    "src/styles.css"
+],
+
+relancer votre serveur de développement 
+stopper Ctrl + C 
+ng serve --open 
+
+=> modifier le fichier app.component.html 
+
+<div class="container">
+    <section class="row">
+        <div class="col-6">
+            <app-premier></app-premier>
+        </div>
+        <div class="col-6">
+            <app-deuxieme></app-deuxieme>
+        </div>
+    </section>
+</div>

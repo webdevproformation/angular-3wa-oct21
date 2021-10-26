@@ -1,0 +1,40 @@
+jusqu'à maintenant toutes données saisies 
+stocker dans la RAM du navigateur =>  
+lorsque l'on rafraichit le navigateur 
+toutes les modifications sont effacées et remises dans leurs valeurs initiales
+
+=> persister les données dans une base de données  
+
+=> simuler une base de données => utiliser librairie json-server 
+
+=> https://www.npmjs.com/package/json-server
+
+= installer en global cette librairie ( base de données + api restfull )
+
+npm i -g json-server
+
+créer dans le dossier angular un nouveau dossier jour-bdd
+dans ce dossier créer un fichier bdd.json => base de données 
+// "articles" => une table dans cette base (collection) 
+// chaque objet json dans la collection articles => 3 enregistrements (document)
+
+// une fois que la base / collections / documents sont créés => communiquer avec notre projet Angular 
+// démarrer le serveur qui va permettre de communiquer avec cette base  
+// json-server
+
+// dans le deuxième terminal positionner dans jour1-bdd
+// cd ../jour1-bdd
+// démarrer le serveur => json-server --watch bdd.json
+// consommer les données dans un composant angular 
+
+// créer un troisième terminal
+// ng g c start/api
+
+// dans notre application Angular => requête ajax pour consommer 
+// les données disponibles => http://localhost:3000/articles
+
+// app.module.ts 
+
+import { HttpClientModule } from "@angular/common/http";
+
+// 

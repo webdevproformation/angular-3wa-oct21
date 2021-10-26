@@ -1,0 +1,59 @@
+{
+  "articles": [
+    {
+      "id": 3,
+      "nom": "Article 3",
+      "contenu": "lorem ipsum",
+      "user_id" : 1
+    },
+    {
+      "nom": "article 7",
+      "contenu": "lorem  ipsum",
+      "id": 7,
+      "user_id" : 1
+    },
+    {
+      "nom": "article 9",
+      "contenu": "lorem  ipsum",
+      "id": 9,
+      "user_id" : 1
+    },
+    {
+      "nom": "article 10",
+      "contenu": "lorem  ipsum",
+      "id": 10,
+      "user_id" : 1
+    },
+    {
+      "nom": "article 12",
+      "contenu": "lorem  ipsum",
+      "id": 12,
+      "user_id" : 3
+    },
+    {
+      "nom": "article 6",
+      "contenu": "lorem  ipsum",
+      "id": 14,
+      "user_id" : 3
+    },
+    {
+      "nom": "article 7",
+      "contenu": "lorem  ipsum",
+      "id": 15,
+      "user_id" : 2
+    }
+  ],
+  "users" : [
+    { "id" : 1 , "nom" : "Alain" , "status" : true },
+    { "id" : 2 , "nom" : "Benjamin" , "status" : false },
+    { "id" : 3 , "nom" : "Charles" , "status" : false }
+  ], 
+  "commentaires" : [
+    { "id" : 1 , "contenu" : "lorem ipsum 1" , "user_id" : 2 },
+    { "id" : 2 , "contenu" : "lorem ipsum 2" , "user_id" : 2 },
+    { "id" : 3 , "contenu" : "lorem ipsum 3" , "user_id" : 1 },
+    { "id" : 4 , "contenu" : "lorem ipsum 4" , "user_id" : 1 },
+    { "id" : 5 , "contenu" : "lorem ipsum 5" , "user_id" : 1 },
+    { "id" : 6 , "contenu" : "lorem ipsum 6" , "user_id" : 3 }
+  ]
+}

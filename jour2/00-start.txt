@@ -1,0 +1,47 @@
+typescript
+https://formation.webdevpro.net/typescript
+login : typescript
+passwd : microsoft
+
+angular
+https://formation.webdevpro.net/angular
+login : angular
+passwd : google
+
+https://github.com/webdevproformation/angular-3wa-sept21
+
+
+// -------------------- 
+
+des questions ??? 
+
+json-server => base de données accessible depuis une adresse internet 
+
+http://localhost:3000/users + GET => SELECT * FROM users
+http://localhost:3000/users + POST + { login : "toto" , password : "tata" } 
+                    => INSERT INTO users ( login, password) VALUES  ("toto" , "tata" )
+
+http://localhost:3000/users/1 + DELETE       => DELETE FROM users WHERE id = 1          
+
+http://localhost:3000/users/2 + PUT + { login : "tutu" , password : "tata" } 
+                    => UPDATE users SET login = "tutu" , password = "tata" WHERE id = 2
+
+             Requete Http                  =  requete SQL
+
+
+             API Restfull = Application Program Interface : programme qui permet de faire communiquer 
+                        deux programmes
+
+Angular     ------------------------------------------------   Base de données 
+
+-----------------------
+
+créer un nouveau projet 
+ng new jour2Http
+
+4 méthodes // 
+RxJS .pipe()
+
+ouvrir le fichier bdd.json
+
+{}

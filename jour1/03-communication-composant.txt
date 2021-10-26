@@ -1,0 +1,50 @@
+menu (composant parent => appeler composant like)
+like 
+
+dans le deuxieme terminal , créer deux composants : 
+ng g c start/menu 
+ng g c start/like
+
+cas pratique : 
+
+dans le composant like 
+
+contient le html suivant 
+<span>nbLike</span>
+<button>augmenter</button>
+
+class 
+nbLike = 0 
+si je clique le bouton augmenter => augmenter de +1 le nombre de like 
+
+afficher ce composant dans app.component.html 
+utiliser bootstrap pour styliser le bouton 
+
+app.component.html 
+
+<section class="row">
+        <div class="col-6">
+            <app-like></app-like>
+        </div>
+</section>
+
+Cas pratique : 
+
+pouvez vous ajouter un nouveau bouton dans le composant like qui permet de diminuer le nombre de like 
+
+// communication entre les composants 
+// modifier une valeur dans une class stocker les valeurs dans le PARENT 
+// dès que la valeur est modifiée dans le Parent => Automatiquement les enfants sont mis à jour  
+
+Menu (données stockées et envoyée aux composants enfant @Input)
+    => like
+    => like (data)
+    => like (data)
+    => like
+    => like => modifier les données dans le parent (state du parent)
+    // automatiquement les valeurs sont mis à jour dans le ou les enfants
+
+si maintenant on veut effectuer une communication entre composants frères => ça ne fonctionne pas ... par défaut via ce système de @Input / @Output
+la librairie RxJS 
+
+

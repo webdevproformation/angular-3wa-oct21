@@ -1,0 +1,91 @@
+1 sur votre ordinateur créer un nouveau dossier angular 
+2 dans ce dossier créer un sous dossier jour1 
+
+3 démarrer votre IDE et sélectionner le dossier angular
+
+4 voici les liens des supports : 
+
+typescript
+https://formation.webdevpro.net/typescript
+login : typescript
+passwd : microsoft
+
+angular
+https://formation.webdevpro.net/angular
+login : angular
+passwd : google
+
+// formulaire dans Angular => Template Driven Form / Reactive Form 
+// une librairie qui RxJS 
+// permet de créer des streams et dès que il y a une modification sur le stream (ajouter une nouvelle information) => RxJS permet d'e s'abonner au stream et de récupérer les modifications 
+(et de faire un traitement)
+
+=> utiliser ligne de commande 
+=> ng new nom_projet
+=> ng new jour1Reprise
+
+// créer le dossier jour1Reprise qui contient toutes l'architecture de Angular 
+// le dossier le plus important => src/app application 
+
+// dans ce dossier app.module.ts => module racine de projet Angular 
+// lien entre le navigateur  // votre application Angular => typescript 
+
+// application Angular => brique de base des applications Angular Composant 
+
+// app.component.ts 
+
+import { Component } from '@angular/core';
+
+@Component({ 
+   selector : "balise_html" , // balise que l'on utiliser dans les fichiers de vues
+   template : `<h1>hello</h1>` 
+})
+export class Nom{
+
+}
+
+// pour créer des composants 
+// plusieurs manières de faire :
+// à la main => créer un fichier mettre ce code / app.module.ts 
+//              app.module.ts => déclarer le nouveau module créé dans ce fichier 
+                                importer + déclarer 
+
+// via une ligne de commande : 
+// pour créer des composants :  
+// ng generate component dossier/nom_composant
+// ng g c start/reprise
+
+// cd jour1Reprise
+
+// la commande ng g c .... 
+// utilise le fichier angular.json pour réaliser ses actions 
+// pour éviter d'avoir 4 fichiers à chaque fois + dossier 
+// modifier le fichier angular.json => juste un fichier .ts 
+
+"@schematics/angular:component": {
+          "skipTests": true ,
+          "inlineStyle": true,
+          "inlineTemplate": true,
+          "flat": true
+        }
+
+Pour supprimer des composants => n'existe pas de commande 
+
+// manuellement => 1 supprimer le dossier start 
+//                 2 app.module.ts supprimer les déclarations de composants (à deux endroits)
+
+// recréer un composant 
+ng g c start/premier
+
+// dans le composant premier 
+// envoyer des informations de class => vers la vue (propriété template)
+
+créer un deuxième composant 
+ng g c start/deuxieme
+
+ajouter un deuxième terminal 
+Ctrl + P => 
+
+
+
+

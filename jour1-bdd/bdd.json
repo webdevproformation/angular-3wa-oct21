@@ -31,14 +31,6 @@
       "dt_creation": 1635345385973,
       "user_id": 3,
       "id": 14
-    },
-    {
-      "nom": "Article ",
-      "contenu": "de charles",
-      "etat": true,
-      "dt_creation": 1635342362681,
-      "user_id": 3,
-      "id": 15
     }
   ],
   "users": [

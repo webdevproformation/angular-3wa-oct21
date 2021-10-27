@@ -46,6 +46,7 @@ import { ArticleModifComponent } from './article-modif.component';
       { path: "rxjs" , component : RxjsComponent } ,
       { path: "exemple/:id" , component : ExempleComponent } ,
       { path: "exemple" , component : ExempleComponent } ,
+      { path: "back/article_modif/:id" , component : ArticleModifComponent } ,
       { path: "back/article_add" , component : ArticleAddComponent } ,
       { path: "back" , component : DashboardComponent } ,
       { path: "**" , component : NotFoundComponent } ,

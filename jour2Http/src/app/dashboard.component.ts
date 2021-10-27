@@ -74,7 +74,7 @@ export class DashboardComponent implements OnInit {
   }
 
   public onClickModif(id : string){
-    this.nav.navigate(["/article_modif", id])
+    this.nav.navigate(["/back/article_modif", id])
   }
 
   // dans le composant dashboard => mettre en place l'action qui va permettre de supprimer un article 

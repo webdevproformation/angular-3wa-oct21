@@ -1,6 +1,11 @@
 import { Component, OnInit } from '@angular/core';
 import { NgForm } from "@angular/forms";
 import { HttpClient } from "@angular/common/http"
+import { Observable } from "rxjs"
+
+interface ProfilUserInterface {
+  id : number , nom : string , login : string , password : string , status: boolean 
+}
 
 @Component({
   selector: 'app-connexion',
@@ -45,10 +50,20 @@ export class ConnexionComponent implements OnInit {
   }
   public onSubmit( connexion : NgForm){
     if(connexion.valid){
-      const {login , password }= connexion.value;
+      const { login , password } = connexion.value;
 
-      this.req.get( `${this.urlUsers}?login=${login}&password=${password}` )
-      .subscribe( profil => console.log(profil) )
+      (this.req.get( `${this.urlUsers}?login=${login}&password=${password}` ) as Observable<Array<ProfilUserInterface>>)
+      .subscribe( 
+        profil => {
+          if(profil.length === 1){
+            const [profilUser] = profil;
+            localStorage.setItem("auth" , JSON.stringify({id : profilUser.id , nom : profilUser.nom }))
+            // information persistante dans le navigateur => on va pouvoir accéder au back office 
+            window.location.href = "/" // redirection vers la page d'accueil 
+            // console.log(profil) 
+          }
+        }
+      )
     }
   }
 

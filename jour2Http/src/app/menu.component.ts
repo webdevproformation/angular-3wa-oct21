@@ -11,7 +11,9 @@ import { Component, OnInit } from '@angular/core';
         <li><a routerLink="/exemple">exemple</a></li>
       </ul>
       <ul class="connexion">
-        <li><a routerLink="/connexion">Connexion</a></li>
+        <li *ngIf="!isLogged()"><a routerLink="/connexion">Connexion</a></li>
+        <li *ngIf="isLogged()" (click)="onClickLoggout($event)"><a routerLink="/">Déconnexion</a></li>
+        <li *ngIf="isLogged()"><a routerLink="/">Gérer le site</a></li>
       </ul>
     <div>
   `,
@@ -32,7 +34,17 @@ import { Component, OnInit } from '@angular/core';
   ]
 })
 export class MenuComponent implements OnInit {
-
+  public isLogged(): boolean{
+    if(localStorage.getItem("auth")){
+      return true;
+    }
+    return false;
+  }
+  public onClickLoggout($event :Event){
+    $event.preventDefault(); 
+    localStorage.removeItem("auth");
+    window.location.href="/connexion";
+  }
   constructor() { }
 
   ngOnInit(): void {

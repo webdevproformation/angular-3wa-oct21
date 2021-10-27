@@ -1,18 +1,6 @@
 {
   "articles": [
     {
-      "id": 3,
-      "nom": "Article 3",
-      "contenu": "lorem ipsum",
-      "user_id": 1
-    },
-    {
-      "nom": "article 7",
-      "contenu": "lorem  ipsum",
-      "id": 7,
-      "user_id": 1
-    },
-    {
       "nom": "article 9",
       "contenu": "lorem  ipsum",
       "id": 9,
@@ -37,12 +25,6 @@
       "user_id": 3
     },
     {
-      "nom": "article 7",
-      "contenu": "lorem  ipsum",
-      "id": 15,
-      "user_id": 2
-    },
-    {
       "nom": "Premier article ",
       "contenu": "Créer via la back office",
       "etat": true,
@@ -62,14 +44,6 @@
       "etat": true,
       "dt_creation": 1635340880176,
       "id": 18
-    },
-    {
-      "nom": "Nouvel article",
-      "contenu": "Rédigé par Charles",
-      "etat": true,
-      "dt_creation": 1635341076088,
-      "user_id": 3,
-      "id": 19
     }
   ],
   "users": [

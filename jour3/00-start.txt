@@ -1,0 +1,24 @@
+typescript
+https://formation.webdevpro.net/typescript
+login : typescript
+passwd : microsoft
+
+angular
+https://formation.webdevpro.net/angular
+login : angular
+passwd : google
+
+https://github.com/webdevproformation/angular-3wa-sept21
+https://github.com/webdevproformation/angular-3wa-oct21
+
+// redémarrer le projet d'hier 
+// => cd jour2Http/ 
+// ng serve -o
+
+// la base de données 
+// cd jour1-bdd
+// json-server --watch bdd.json
+
+// requête en base de données => class  HttpClient utilise rxjs 
+// la class ActivatedRoute => permet des informations sur l'url de la page en cours 
+// rxjs pour fonctionner 

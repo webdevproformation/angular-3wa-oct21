@@ -12,6 +12,7 @@ import { ContactComponent } from './contact.component';
 import { ConnexionComponent } from './connexion.component';
 import { RxjsComponent } from './rxjs.component';
 import { ArticleComponent } from './article.component';
+import { ExempleComponent } from './exemple.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import { ArticleComponent } from './article.component';
     ConnexionComponent,
     RxjsComponent,
     HomeComponent,
-    ArticleComponent
+    ArticleComponent,
+    ExempleComponent
   ],
   imports: [
     BrowserModule,
@@ -34,6 +36,8 @@ import { ArticleComponent } from './article.component';
       { path: "connexion" , component : ConnexionComponent } ,
       { path: "article/:id" , component : ArticleComponent } ,
       { path: "rxjs" , component : RxjsComponent } ,
+      { path: "exemple/:id" , component : ExempleComponent } ,
+      { path: "exemple" , component : ExempleComponent } ,
     ])
   ],
   providers: [],

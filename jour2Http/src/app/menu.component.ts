@@ -8,6 +8,7 @@ import { Component, OnInit } from '@angular/core';
         <li><a routerLink="/">Accueil</a></li>
         <li><a routerLink="/contact">Contact</a></li>
         <li><a routerLink="/rxjs">rxjs</a></li>
+        <li><a routerLink="/exemple">exemple</a></li>
       </ul>
       <ul class="connexion">
         <li><a routerLink="/connexion">Connexion</a></li>

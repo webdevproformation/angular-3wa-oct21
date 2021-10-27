@@ -1,6 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute , Router } from "@angular/router";
-
+import { HttpClient } from "@angular/common/http"
+import { ArticleInterface } from "./article.interface";
+import { Observable  } from 'rxjs';
+import { mergeMap } from "rxjs/operators"
 @Component({
   selector: 'app-article',
   template: `
@@ -12,15 +15,25 @@ import { ActivatedRoute , Router } from "@angular/router";
   ]
 })
 export class ArticleComponent implements OnInit {
-
-  constructor( private route : ActivatedRoute) { }
-
+  private urlArticles = "http://localhost:3000/articles";
+  constructor( private route : ActivatedRoute , private req : HttpClient  ) { }
   ngOnInit(): void {
     this.route.paramMap
+    .pipe(
+      mergeMap( ( params ) => { 
+        const id = params.get("id") as string
+        return this.req.get( `${this.urlArticles}/${id}` ) as Observable<ArticleInterface>
+      } )
+    )
+    .subscribe( article => console.log(article) )
+    
+      // les deux notations sont équivalentes 
+     /* this.route.paramMap
         .subscribe( ( params ) => {
-          console.log(params.get("id")) // récupérer l'id de l'article concerné 
+          const id = params.get("id") as string // récupérer l'id de l'article concerné 
           // requete http sur notre base de données pour récupérer l'article N° id récupéré
-        } )
+          (this.req.get( `${this.urlArticles}/${id}` ) as Observable<ArticleInterface>)
+            .subscribe( article => console.log(article) )
+        } )  */
   }
-
 }

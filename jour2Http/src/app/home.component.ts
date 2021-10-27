@@ -1,11 +1,10 @@
 import { Component, OnInit } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable , combineLatest } from 'rxjs';
+import { ArticleInterface } from "./article.interface";
 import { map } from 'rxjs/operators';
 
-interface ArticleInterface {
-  id : number , nom : string , contenu : string , user_id ?: number , auteur ?: string
-}
+
 
 interface UserInterface {
   id : number , nom : string , status : boolean
@@ -66,7 +65,7 @@ export class HomeComponent implements OnInit {
     )
     .subscribe( (rep) => {
       this.articles = rep
-      console.log(this.articles);
+      //console.log(this.articles);
     }  )
   }
 

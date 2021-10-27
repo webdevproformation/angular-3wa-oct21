@@ -14,6 +14,8 @@ import { RxjsComponent } from './rxjs.component';
 import { ArticleComponent } from './article.component';
 import { ExempleComponent } from './exemple.component';
 import { NotFoundComponent } from './not-found.component';
+import { DashboardComponent } from './dashboard.component';
+import { ArticleAddComponent } from './article-add.component';
 
 @NgModule({
   declarations: [
@@ -26,7 +28,9 @@ import { NotFoundComponent } from './not-found.component';
     HomeComponent,
     ArticleComponent,
     ExempleComponent,
-    NotFoundComponent
+    NotFoundComponent,
+    DashboardComponent,
+    ArticleAddComponent
   ],
   imports: [
     BrowserModule,
@@ -40,6 +44,8 @@ import { NotFoundComponent } from './not-found.component';
       { path: "rxjs" , component : RxjsComponent } ,
       { path: "exemple/:id" , component : ExempleComponent } ,
       { path: "exemple" , component : ExempleComponent } ,
+      { path: "back/article_add" , component : ArticleAddComponent } ,
+      { path: "back" , component : DashboardComponent } ,
       { path: "**" , component : NotFoundComponent } ,
     ])
   ],

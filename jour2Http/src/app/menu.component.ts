@@ -13,7 +13,7 @@ import { Component, OnInit } from '@angular/core';
       <ul class="connexion">
         <li *ngIf="!isLogged()"><a routerLink="/connexion">Connexion</a></li>
         <li *ngIf="isLogged()" (click)="onClickLoggout($event)"><a routerLink="/">Déconnexion</a></li>
-        <li *ngIf="isLogged()"><a routerLink="/">Gérer le site</a></li>
+        <li *ngIf="isLogged()"><a routerLink="/back">Gérer le site</a></li>
       </ul>
     <div>
   `,
@@ -43,7 +43,7 @@ export class MenuComponent implements OnInit {
   public onClickLoggout($event :Event){
     $event.preventDefault(); 
     localStorage.removeItem("auth");
-    window.location.href="/connexion";
+    window.location.href="/connexion"; // rdv 14h00 bon appétit 
   }
   constructor() { }
 

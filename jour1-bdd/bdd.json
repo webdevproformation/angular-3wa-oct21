@@ -41,28 +41,42 @@
       "contenu": "lorem  ipsum",
       "id": 15,
       "user_id": 2
+    },
+    {
+      "nom": "Premier article ",
+      "contenu": "Créer via la back office",
+      "etat": true,
+      "dt_creation": 1635340632066,
+      "id": 16
+    },
+    {
+      "nom": "Deuxième article ",
+      "contenu": "un peu de contenu",
+      "etat": false,
+      "dt_creation": 1635340671487,
+      "id": 17
     }
   ],
   "users": [
     {
       "id": 1,
       "nom": "Alain",
-      "login" : "admin1",
-      "password" : "admin1",
+      "login": "admin1",
+      "password": "admin1",
       "status": true
     },
     {
       "id": 2,
       "nom": "Benjamin",
-      "login" : "admin2",
-      "password" : "admin2",
+      "login": "admin2",
+      "password": "admin2",
       "status": false
     },
     {
       "id": 3,
       "nom": "Charles",
-      "login" : "admin3",
-      "password" : "admin3",
+      "login": "admin3",
+      "password": "admin3",
       "status": false
     }
   ],

@@ -32,3 +32,14 @@ vérifier est ce que login et le password saisit existent bien dans la base de d
       "status": false
     }
   ]
+
+// créer un nouveau composant 
+// article-add 
+// contenir un formulaire 
+//    3 champs => titre / contenu / etat 
+//      bouton de soumission 
+
+// ce composant est accessible suite en cliquant sur le lien back/article_add 
+
+// faire en sorte que lorsque vous soumettre le formulaire 
+// ajouter un nouvel enregistrement dans la table articles 

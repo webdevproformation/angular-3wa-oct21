@@ -1,0 +1,9 @@
+1 site => créer une base de données RealTime
+2 sur notre terminal 
+    => npm i firebase @angular/fire 
+
+3 modifier le fichier src/environments/environment.ts 
+ajouter une nouvelle valeur => firebase: { .... }
+// page d'accueil > projet > roue dentée 
+
+4 modifier le fichier app.module.ts 

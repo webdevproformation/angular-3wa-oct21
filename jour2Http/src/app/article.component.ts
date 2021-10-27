@@ -7,16 +7,19 @@ import { mergeMap } from "rxjs/operators"
 @Component({
   selector: 'app-article',
   template: `
-    <p>
-      article works!
-    </p>
+    <h1>{{article.nom}}</h1>
+    <p>{{article.contenu}}</p>
   `,
   styles: [
   ]
 })
 export class ArticleComponent implements OnInit {
   private urlArticles = "http://localhost:3000/articles";
-  constructor( private route : ActivatedRoute , private req : HttpClient  ) { }
+  public article : ArticleInterface = {}
+  constructor( 
+      private route : ActivatedRoute , 
+      private req : HttpClient , 
+       ) { }
   ngOnInit(): void {
     this.route.paramMap
     .pipe(
@@ -25,7 +28,11 @@ export class ArticleComponent implements OnInit {
         return this.req.get( `${this.urlArticles}/${id}` ) as Observable<ArticleInterface>
       } )
     )
-    .subscribe( article => console.log(article) )
+    .subscribe( article => {
+        console.log(article);
+        this.article = article 
+      } 
+    )
     
       // les deux notations sont équivalentes 
      /* this.route.paramMap

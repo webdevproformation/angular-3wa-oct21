@@ -25,25 +25,12 @@
       "user_id": 3
     },
     {
-      "nom": "Premier article ",
-      "contenu": "Créer via la back office",
+      "nom": "Article ",
+      "contenu": "de charles",
       "etat": true,
-      "dt_creation": 1635340632066,
-      "id": 16
-    },
-    {
-      "nom": "Deuxième article ",
-      "contenu": "un peu de contenu",
-      "etat": false,
-      "dt_creation": 1635340671487,
-      "id": 17
-    },
-    {
-      "nom": "troisième article",
-      "contenu": "encore un article",
-      "etat": true,
-      "dt_creation": 1635340880176,
-      "id": 18
+      "dt_creation": 1635342362681,
+      "user_id": 3,
+      "id": 15
     }
   ],
   "users": [

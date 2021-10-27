@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { HttpClient } from "@angular/common/http";
-import { Observable } from "rxjs"
+import { Observable } from "rxjs";
+import { Router } from "@angular/router";
 
 @Component({
   selector: 'app-dashboard',
@@ -22,7 +23,7 @@ import { Observable } from "rxjs"
         <td>{{article.nom}}</td>
         <td>{{article.etat}}</td>
         <td>
-          <button>modifier</button>
+          <button (click)="onClickModif(article.id)">modifier</button>
           <button (click)="onClickSuppr(article.id)">supprimer</button>
         </td>
       </tr>
@@ -46,7 +47,7 @@ import { Observable } from "rxjs"
 export class DashboardComponent implements OnInit {
   private urlArticles : string = "http://localhost:3000/articles" ;
   public articles : Array<any> = []
-  constructor(private req : HttpClient) { }
+  constructor(private req : HttpClient , private nav : Router) { }
   ngOnInit(): void {
     this.req.get(`${this.urlArticles}`)
       .subscribe( (articles : any) => { 
@@ -70,6 +71,10 @@ export class DashboardComponent implements OnInit {
       return profil.nom 
     }
     return "";
+  }
+
+  public onClickModif(id : string){
+    this.nav.navigate(["/article_modif", id])
   }
 
   // dans le composant dashboard => mettre en place l'action qui va permettre de supprimer un article 

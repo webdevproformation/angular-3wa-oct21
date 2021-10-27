@@ -16,6 +16,7 @@ import { ExempleComponent } from './exemple.component';
 import { NotFoundComponent } from './not-found.component';
 import { DashboardComponent } from './dashboard.component';
 import { ArticleAddComponent } from './article-add.component';
+import { ArticleModifComponent } from './article-modif.component';
 
 @NgModule({
   declarations: [
@@ -30,7 +31,8 @@ import { ArticleAddComponent } from './article-add.component';
     ExempleComponent,
     NotFoundComponent,
     DashboardComponent,
-    ArticleAddComponent
+    ArticleAddComponent,
+    ArticleModifComponent
   ],
   imports: [
     BrowserModule,

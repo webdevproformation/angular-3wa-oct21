@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit , OnChanges } from '@angular/core';
 import { NgForm } from "@angular/forms";
 import { HttpClient } from "@angular/common/http";
 import { Router , ActivatedRoute } from "@angular/router";
@@ -9,13 +9,11 @@ import { mergeMap } from 'rxjs/operators';
   template: `
     <h1>Modifier un article</h1>
     <form #add="ngForm" (submit)="onSubmit(add)">
-      <input type="hidden" name="id" ngModel #id="ngModel" [value]="article.id" >
-      <input type="text" name="nom" placeholder="titre article" ngModel #nom="ngModel" [value]="article.nom" >
-      <textarea name="contenu" placeholder="contenu article" ngModel #contenu="ngModel" rows="8" [value]="article.contenu"></textarea>
-      <select name="etat" ngModel #etat="ngModel" [value]="article.etat">
-        <option value="">veuillez sélectionner un état</option>
-        <option value="1" selected="selected">actif</option>
-        <option value="0">inActif</option>
+      <input type="hidden" name="id" [(ngModel)]="article.id">
+      <input type="text" name="nom" placeholder="titre article" [(ngModel)]="article.nom" >
+      <textarea name="contenu" placeholder="contenu article" [(ngModel)]="article.contenu" rows="8" [value]></textarea>
+      <select name="etat" [(ngModel)]="article.etat">
+        <option *ngFor="let e of etat" [ngValue]="e.etat">{{ e.label }}</option>
       </select>
       <div>
         <input type="submit">
@@ -35,11 +33,29 @@ import { mergeMap } from 'rxjs/operators';
 })
 export class ArticleModifComponent implements OnInit {
 
+  public etat = [  
+      { valeur : "" , label : "veuillez sélectionner un état" , etat : false } ,  
+      { valeur : "1" , label : "actif" , etat : true} ,  
+      { valeur : "0" , label : "inActif" , etat : false } ,  
+  ]
+
   private urlArticles: string = "http://localhost:3000/articles"
   public article : any = {}; 
 
   constructor(private req : HttpClient , private nav : Router , private route : ActivatedRoute) { }
-
+  ngOnChanges(){
+    this.route.paramMap
+    .pipe( 
+      mergeMap( (url) => {
+        const id = url.get("id") as string ;
+        return this.req.get(`${this.urlArticles}/${id}`)
+      })
+    )
+    .subscribe( ( article ) => { 
+      this.article = article 
+      // console.log(article)
+    })
+  }
   ngOnInit(): void {
     this.route.paramMap
     .pipe( 
@@ -65,7 +81,7 @@ export class ArticleModifComponent implements OnInit {
       this.req.put( `${this.urlArticles}/${id}` , { 
         nom ,
         contenu ,
-        etat : etat === "1" ? true : false,
+        etat : etat ,
         dt_creation : Date.now(),
         user_id 
       } ).subscribe( (reponse : any) => {

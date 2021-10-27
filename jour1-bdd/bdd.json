@@ -2,27 +2,35 @@
   "articles": [
     {
       "nom": "article 9",
-      "contenu": "lorem  ipsum",
-      "id": 9,
-      "user_id": 1
+      "contenu": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus sit amet ex consequat, porta eros at, pretium arcu. Nam et porttitor velit, in dignissim nunc. Etiam suscipit id libero in dapibus. Etiam posuere elementum elit sit amet viverra. Sed mollis est fringilla ex fermentum convallis. Nulla ullamcorper tortor elit, vitae rutrum risus pellentesque non. Nulla sit amet ex id nunc eleifend placerat. Vestibulum venenatis neque sed sodales venenatis. Mauris ac mauris nulla. Quisque a porta sapien, eget iaculis mi. Nam eu mollis nisi. Cras in mollis mauris. ",
+      "etat": false,
+      "dt_creation": 1635345287085,
+      "user_id": 3,
+      "id": 9
     },
     {
       "nom": "article 10",
-      "contenu": "lorem  ipsum",
-      "id": 10,
-      "user_id": 1
+      "contenu": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus sit amet ex consequat, porta eros at, pretium arcu. Nam et porttitor velit, in dignissim nunc. Etiam suscipit id libero in dapibus. Etiam posuere elementum elit sit amet viverra. Sed mollis est fringilla ex fermentum convallis. Nulla ullamcorper tortor elit, vitae rutrum risus pellentesque non. Nulla sit amet ex id nunc eleifend placerat. Vestibulum venenatis neque sed sodales venenatis. Mauris ac mauris nulla. Quisque a porta sapien, eget iaculis mi. Nam eu mollis nisi. Cras in mollis mauris. ",
+      "etat": true,
+      "dt_creation": 1635345345829,
+      "user_id": 3,
+      "id": 10
     },
     {
-      "nom": "article 12",
-      "contenu": "lorem  ipsum",
-      "id": 12,
-      "user_id": 3
+      "nom": "Modification du titre pour l'article 12",
+      "contenu": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer lacinia, turpis quis venenatis condimentum, odio ante maximus nibh, non pulvinar felis quam nec ante. Aliquam ullamcorper diam elit, gravida vestibulum neque posuere nec. Aliquam erat volutpat. Aenean sit amet mauris dictum velit gravida venenatis vitae at mauris. Mauris bibendum sem magna, vel laoreet dolor aliquet nec. Aliquam ac tortor in mauris imperdiet molestie. Maecenas lorem mi, dictum vitae arcu id, consequat ornare lorem. Nullam quis pretium enim. ",
+      "etat": false,
+      "dt_creation": 1635345277422,
+      "user_id": 3,
+      "id": 12
     },
     {
-      "nom": "article 6",
-      "contenu": "lorem  ipsum",
-      "id": 14,
-      "user_id": 3
+      "nom": "Modification du titre",
+      "contenu": "Toto Nulla cursus massa in elementum rhoncus. Fusce et massa et mi porttitor dapibus a vitae felis. Vivamus laoreet non augue ut semper. Etiam pellentesque feugiat sodales. Integer non tellus in eros ultricies tincidunt eget nec tellus. Integer scelerisque vel ipsum ac egestas. Nulla vel orci vel tortor luctus tempor. In hendrerit molestie sapien, sed semper nisl fringilla id. Phasellus risus sapien, feugiat sed rutrum a, posuere nec velit. Sed vehicula dolor id magna luctus, in euismod urna bibendum. Ut non est eu ligula maximus tincidunt sed in mauris. Phasellus quis ligula et lorem laoreet pharetra porttitor sed dui. Quisque euismod risus eget nisl condimentum vestibulum. Curabitur ac tempor ipsum. Vestibulum auctor, libero quis pretium porta, turpis risus suscipit orci, commodo efficitur risus nunc et mi.",
+      "etat": false,
+      "dt_creation": 1635345385973,
+      "user_id": 3,
+      "id": 14
     },
     {
       "nom": "Article ",

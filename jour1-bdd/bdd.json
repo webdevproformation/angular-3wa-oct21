@@ -47,16 +47,22 @@
     {
       "id": 1,
       "nom": "Alain",
+      "login" : "admin1",
+      "password" : "admin1",
       "status": true
     },
     {
       "id": 2,
       "nom": "Benjamin",
+      "login" : "admin2",
+      "password" : "admin2",
       "status": false
     },
     {
       "id": 3,
       "nom": "Charles",
+      "login" : "admin3",
+      "password" : "admin3",
       "status": false
     }
   ],

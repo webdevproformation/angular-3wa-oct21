@@ -1,0 +1,34 @@
+dans le composant connexion 
+
+créer un formulaire 
+    login / password 
+
+une fois que vous avez soumis le formulaire 
+requête dans la base de données 
+
+vérifier est ce que login et le password saisit existent bien dans la base de données 
+// 
+
+"users": [
+    {
+      "id": 1,
+      "nom": "Alain",
+      "login" : "admin1",
+      "password" : "admin1",
+      "status": true
+    },
+    {
+      "id": 2,
+      "nom": "Benjamin",
+      "login" : "admin2",
+      "password" : "admin2",
+      "status": false
+    },
+    {
+      "id": 3,
+      "nom": "Charles",
+      "login" : "admin3",
+      "password" : "admin3",
+      "status": false
+    }
+  ]

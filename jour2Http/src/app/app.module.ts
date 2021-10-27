@@ -13,6 +13,7 @@ import { ConnexionComponent } from './connexion.component';
 import { RxjsComponent } from './rxjs.component';
 import { ArticleComponent } from './article.component';
 import { ExempleComponent } from './exemple.component';
+import { NotFoundComponent } from './not-found.component';
 
 @NgModule({
   declarations: [
@@ -24,7 +25,8 @@ import { ExempleComponent } from './exemple.component';
     RxjsComponent,
     HomeComponent,
     ArticleComponent,
-    ExempleComponent
+    ExempleComponent,
+    NotFoundComponent
   ],
   imports: [
     BrowserModule,
@@ -38,6 +40,7 @@ import { ExempleComponent } from './exemple.component';
       { path: "rxjs" , component : RxjsComponent } ,
       { path: "exemple/:id" , component : ExempleComponent } ,
       { path: "exemple" , component : ExempleComponent } ,
+      { path: "**" , component : NotFoundComponent } ,
     ])
   ],
   providers: [],

@@ -9,6 +9,8 @@ import { mergeMap } from "rxjs/operators"
   template: `
     <h1>{{article.nom}}</h1>
     <p>{{article.contenu}}</p>
+    <hr>
+    <button (click)="onClickGoAccueil()">Retour à l'accueil</button>
   `,
   styles: [
   ]
@@ -16,9 +18,15 @@ import { mergeMap } from "rxjs/operators"
 export class ArticleComponent implements OnInit {
   private urlArticles = "http://localhost:3000/articles";
   public article : ArticleInterface = {}
+
+  public onClickGoAccueil(){
+    this.nav.navigate(["/"])
+  }
+
   constructor( 
       private route : ActivatedRoute , 
       private req : HttpClient , 
+      private nav : Router
        ) { }
   ngOnInit(): void {
     this.route.paramMap
@@ -29,10 +37,16 @@ export class ArticleComponent implements OnInit {
       } )
     )
     .subscribe( article => {
-        console.log(article);
-        this.article = article 
-      } 
-    )
+        // console.log(article);
+        if(article !== null){
+          this.article = article 
+          return ;
+        }
+      }, 
+      () => { 
+        this.nav.navigate(["/not-found"])
+      }
+    )// rdv rdv 11h32 bon café tout le monde !!! 
     
       // les deux notations sont équivalentes 
      /* this.route.paramMap

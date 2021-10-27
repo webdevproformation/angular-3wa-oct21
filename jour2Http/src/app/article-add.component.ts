@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { NgForm } from "@angular/forms";
-import { HttpClient } from "@angular/common/http"
+import { HttpClient } from "@angular/common/http";
+import {Router} from "@angular/router";
 
 @Component({
   selector: 'app-article-add',
@@ -34,7 +35,7 @@ export class ArticleAddComponent implements OnInit {
 
   private urlArticles: string = "http://localhost:3000/articles"
 
-  constructor(private req : HttpClient) { }
+  constructor(private req : HttpClient , private nav : Router) { }
 
   ngOnInit(): void {
   }
@@ -42,13 +43,17 @@ export class ArticleAddComponent implements OnInit {
   public onSubmit(add : NgForm){
     if(add.valid){
       const {nom , contenu , etat} = add.value;
+      const profil = localStorage.getItem("auth") as string ;
+      const user_id = JSON.parse(profil).id;
       this.req.post( `${this.urlArticles}` , { 
         nom ,
         contenu ,
         etat : etat === "1" ? true : false,
-        dt_creation : Date.now()
+        dt_creation : Date.now(),
+        user_id 
       } ).subscribe( (reponse : any) => {
-        console.log(reponse);
+        // console.log(reponse);
+        this.nav.navigate(["/back"]);
       } )
      
     }

@@ -14,6 +14,9 @@ import { FormulaireComponent } from './formulaire.component';
 import { DetailsComponent } from './details.component';
 import { TodoComponent } from './todo.component';
 import { BudgetComponent } from './budget.component';
+import { EncoursComponent } from './encours.component';
+import { FormulaireTodoComponent } from './formulaire-todo.component';
+import { ListeTodoComponent } from './liste-todo.component';
 
 @NgModule({
   declarations: [
@@ -23,7 +26,10 @@ import { BudgetComponent } from './budget.component';
     FormulaireComponent,
     DetailsComponent,
     TodoComponent,
-    BudgetComponent
+    BudgetComponent,
+    EncoursComponent,
+    FormulaireTodoComponent,
+    ListeTodoComponent
   ],
   imports: [
     BrowserModule,

@@ -20,6 +20,8 @@ import { ListeTodoComponent } from './liste-todo.component';
 import { EnregistrementComponent } from './enregistrement.component';
 import { ConnexionComponent } from './connexion.component';
 
+import { AuthService } from "./auth.service";
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -47,7 +49,9 @@ import { ConnexionComponent } from './connexion.component';
       { path : "connexion" , component : ConnexionComponent }, 
     ])
   ],
-  providers: [],
+  providers: [
+    AuthService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

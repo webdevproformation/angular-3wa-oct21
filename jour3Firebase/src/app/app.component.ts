@@ -1,4 +1,6 @@
 import { Component , OnInit } from '@angular/core';
+import { AuthService } from "./auth.service";
+import { AngularFireAuth } from "@angular/fire/compat/auth"
 
 
 @Component({
@@ -14,13 +16,16 @@ import { Component , OnInit } from '@angular/core';
           <li class="nav-item">
             <a routerLink="/todo" class="nav-link">Todo List</a>
           </li>
-          <li class="nav-item">
+          <li class="nav-item" *ngIf="authService.isLogged()">
             <a routerLink="/enregistrement" class="nav-link">Créer un profil User</a>
           </li>
         </ul>
         <ul class="navbar-nav ms-auto" >
-          <li class="nav-item">
-          <a routerLink="/connexion" class="nav-link">Connexion</a>
+          <li class="nav-item" *ngIf="!authService.isLogged()">
+            <a routerLink="/connexion" class="nav-link">Connexion</a>
+          </li>
+          <li class="nav-item" *ngIf="authService.isLogged()">
+            <a routerLink="/" class="nav-link" (click)="onClickDeconnexion($event)">Deconnexion</a>
           </li>
         </ul>
       </nav>
@@ -31,4 +36,11 @@ export class AppComponent implements OnInit {
   public title : string = 'jour3Firebase';
   public ngOnInit(){
   }
+  public onClickDeconnexion($event :Event){
+    $event.preventDefault();
+    localStorage.removeItem("auth");
+    this.auth.signOut();
+    window.location.href = "/";
+  }
+  public constructor(public authService :AuthService , private auth : AngularFireAuth ){}
 }

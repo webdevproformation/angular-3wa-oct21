@@ -18,11 +18,9 @@ import { map } from "rxjs/operators";
 export class DetailsComponent implements OnInit {
   public operations : Array<{montant: number , motif : string , key : string}> = [];
   constructor(private db : AngularFireDatabase) { }
-
   public onClickSuppr(id : string){
     this.db.list(`/operations/${id}`).remove()
   }
-
   public onClickModif(id : string , motif : string , montant : string ){
     console.log( id , motif , montant );
     this.db.list("/operations").update( id , { 
@@ -30,7 +28,6 @@ export class DetailsComponent implements OnInit {
       montant : parseInt( montant )
      } );
   }
-
   ngOnInit(): void { 
     const obsReq$ = this.db.list("/operations").snapshotChanges();
     obsReq$
@@ -41,9 +38,6 @@ export class DetailsComponent implements OnInit {
      )
     .subscribe( operations => {
       this.operations = operations; 
-      // console.log(operations);
     } )
-
   }
-
 }

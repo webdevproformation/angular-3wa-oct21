@@ -3,6 +3,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AngularFireModule } from "@angular/fire/compat";
 import { AngularFireDatabaseModule } from "@angular/fire/compat/database";
 import { FormsModule } from "@angular/forms"
+import { RouterModule } from "@angular/router"
 
 import { environment } from "../environments/environment"
 
@@ -11,6 +12,8 @@ import { TotalComponent } from './total.component';
 import { SousTotalComponent } from './sous-total.component';
 import { FormulaireComponent } from './formulaire.component';
 import { DetailsComponent } from './details.component';
+import { TodoComponent } from './todo.component';
+import { BudgetComponent } from './budget.component';
 
 @NgModule({
   declarations: [
@@ -18,13 +21,19 @@ import { DetailsComponent } from './details.component';
     TotalComponent,
     SousTotalComponent,
     FormulaireComponent,
-    DetailsComponent
+    DetailsComponent,
+    TodoComponent,
+    BudgetComponent
   ],
   imports: [
     BrowserModule,
     FormsModule, 
     AngularFireModule.initializeApp(environment.firebase),
-    AngularFireDatabaseModule
+    AngularFireDatabaseModule,
+    RouterModule.forRoot([
+      { path : "" , component : BudgetComponent }, 
+      { path : "todo" , component : TodoComponent }, 
+    ])
   ],
   providers: [],
   bootstrap: [AppComponent]

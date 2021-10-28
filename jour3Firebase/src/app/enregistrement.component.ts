@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { AngularFireAuth } from "@angular/fire/compat/auth";
 
 @Component({
   selector: 'app-enregistrement',
@@ -17,7 +18,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class EnregistrementComponent implements OnInit {
 
-  constructor() { }
+  constructor(private auth : AngularFireAuth) { }
 
   ngOnInit(): void {
   }

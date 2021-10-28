@@ -10,13 +10,15 @@ import { AppComponent } from './app.component';
 import { TotalComponent } from './total.component';
 import { SousTotalComponent } from './sous-total.component';
 import { FormulaireComponent } from './formulaire.component';
+import { DetailsComponent } from './details.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     TotalComponent,
     SousTotalComponent,
-    FormulaireComponent
+    FormulaireComponent,
+    DetailsComponent
   ],
   imports: [
     BrowserModule,

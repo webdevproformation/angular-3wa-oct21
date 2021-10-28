@@ -21,6 +21,11 @@ import { AngularFireDatabase } from "@angular/fire/compat/database"
         <app-formulaire></app-formulaire>
       </div>
     </section>
+    <section class="row">
+      <div class="offset-3 col-6">
+        <app-details></app-details>
+      </div>
+    </section>
   </div>        `
 })
 export class AppComponent implements OnInit {

@@ -28,24 +28,33 @@ export class SousTotalComponent implements OnInit {
 
   ngOnInit(): void {
     const obsReq$ = this.db.list("/operations").valueChanges() as Observable<Array<{montant: number , motif : string}>>
-    let recette :number = 0 ;
+  
     obsReq$.subscribe( operations => {
+      let recette :number = 0 ;
       operations.filter( ope => ope.montant >= 0 )
                 .forEach( operation => {
                   recette += operation.montant;
               } )
       this.recette = recette;
     })
-
-    let depense :number = 0 ;
+    
     obsReq$.subscribe( operations => {
+      let depense :number = 0 ;
       operations.filter( ope => ope.montant < 0 )
                 .forEach( operation => {
                   depense += operation.montant;
               } )
       this.depense = depense;
     })
-
   }
-
 }
+
+// ajouter un nouveau composant sous totaux et dépense / recette => detail 
+
+// liste de formulaire 
+// formulaire 
+// input ( motif )
+// input ( montant )
+// bouton modifier 
+// bouton supprimer  
+

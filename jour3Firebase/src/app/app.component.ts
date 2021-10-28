@@ -1,43 +1,26 @@
 import { Component , OnInit } from '@angular/core';
-import { AngularFireDatabase } from "@angular/fire/compat/database"
 
 
 @Component({
   selector: 'app-root',
   template: `
   <div class="container">
-    <header class="row">
-      <div class="offset-3 col-6">
-        <app-total></app-total>
-      </div>
-    </header>
-    <section class="row">
-      <div class="offset-3 col-6">
-        <app-sous-total></app-sous-total>
-      </div>
-    </section>
-    <section class="row">
-      <div class="offset-3 col-6">
-        <app-formulaire></app-formulaire>
-      </div>
-    </section>
-    <section class="row">
-      <div class="offset-3 col-6">
-        <app-details></app-details>
-      </div>
-    </section>
+      <nav class="navbar navbar-expand navbar-light bg-light px-4">
+        <a routerLink="/" class="navbar-brand">{{ title }}</a>
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a routerLink="/" class="nav-link">Budget</a>
+          </li>
+          <li class="nav-item">
+            <a routerLink="/todo" class="nav-link">Todo List</a>
+          </li>
+        </ul>
+      </nav>
+      <router-outlet></router-outlet>
   </div>        `
 })
 export class AppComponent implements OnInit {
   public title : string = 'jour3Firebase';
-
-  public constructor( private db : AngularFireDatabase ){}
-
-  public onClick(info : string){
-    const article = { nom : info }
-    this.db.list("/articles").push(article);
-  }
-
   public ngOnInit(){
   }
 

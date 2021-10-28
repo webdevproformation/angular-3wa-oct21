@@ -23,5 +23,4 @@ export class AppComponent implements OnInit {
   public title : string = 'jour3Firebase';
   public ngOnInit(){
   }
-
 }

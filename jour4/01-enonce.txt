@@ -1,5 +1,35 @@
 
 
 
-créer un nouveau groupe de composant 
+Dans le composant todo 
+composant 0 
+    le nombre d'action qui sont encours 
+
+---------
+composant 1
+    formulaire => un champ => action 
+                => bouton pour créer l'action  
+    par défaut l'action est en cours 
+
+---------
+composant 2
+liste de toutes les action 
+        liste de toutes les actions 
+            liste de formulaires 
+                    l'action + menu déroulant 2 valeurs encours / finie
+            bouton => modifier action 
+            bouton => supprimer l'action 
+---------
+
+utiliser firebase comme base de données pour stocker les informations de l'application 
+
+les données seront stockées dans une table (collection) todos 
+chaque enregistrement va contenir les valeurs suivantes : 
+{ 
+    nom : ""
+    status : true / false 
+}
+
+
+             
 

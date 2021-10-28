@@ -14,6 +14,9 @@ import { Component , OnInit } from '@angular/core';
           <li class="nav-item">
             <a routerLink="/todo" class="nav-link">Todo List</a>
           </li>
+          <li class="nav-item">
+            <a routerLink="/enregistrement" class="nav-link">Créer un profil User</a>
+          </li>
         </ul>
       </nav>
       <router-outlet></router-outlet>

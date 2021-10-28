@@ -17,6 +17,7 @@ import { BudgetComponent } from './budget.component';
 import { EncoursComponent } from './encours.component';
 import { FormulaireTodoComponent } from './formulaire-todo.component';
 import { ListeTodoComponent } from './liste-todo.component';
+import { EnregistrementComponent } from './enregistrement.component';
 
 @NgModule({
   declarations: [
@@ -29,7 +30,8 @@ import { ListeTodoComponent } from './liste-todo.component';
     BudgetComponent,
     EncoursComponent,
     FormulaireTodoComponent,
-    ListeTodoComponent
+    ListeTodoComponent,
+    EnregistrementComponent
   ],
   imports: [
     BrowserModule,
@@ -39,6 +41,7 @@ import { ListeTodoComponent } from './liste-todo.component';
     RouterModule.forRoot([
       { path : "" , component : BudgetComponent }, 
       { path : "todo" , component : TodoComponent }, 
+      { path : "enregistrement" , component : EnregistrementComponent }, 
     ])
   ],
   providers: [],

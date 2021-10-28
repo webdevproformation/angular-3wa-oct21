@@ -94,3 +94,37 @@ db.list("/collection/table").update(id , {modification})  // subject
 
 Delete 
 db.list("/collection/table").delete(id)
+
+// outil qui permet de gérer vos dépenses 
+
+-10
++100
+-20
+
+composant en haut de la page web 
+
+            solde total de vos dépenses => 70€ 
+
+------------------------------------------------------
+
+        total dépenses         total des recettes 
+
+            -30 €                     100 €
+
+------------------------------------------------------
+
+formulaire 
+    deux champs => 
+        input text => informations (la nature de la dépense)
+        montant => chiffres positif / négatif 
+        soumission 
+
+
+
+
+
+
+
+
+
+

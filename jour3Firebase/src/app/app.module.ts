@@ -18,6 +18,7 @@ import { EncoursComponent } from './encours.component';
 import { FormulaireTodoComponent } from './formulaire-todo.component';
 import { ListeTodoComponent } from './liste-todo.component';
 import { EnregistrementComponent } from './enregistrement.component';
+import { ConnexionComponent } from './connexion.component';
 
 @NgModule({
   declarations: [
@@ -31,7 +32,8 @@ import { EnregistrementComponent } from './enregistrement.component';
     EncoursComponent,
     FormulaireTodoComponent,
     ListeTodoComponent,
-    EnregistrementComponent
+    EnregistrementComponent,
+    ConnexionComponent
   ],
   imports: [
     BrowserModule,
@@ -42,6 +44,7 @@ import { EnregistrementComponent } from './enregistrement.component';
       { path : "" , component : BudgetComponent }, 
       { path : "todo" , component : TodoComponent }, 
       { path : "enregistrement" , component : EnregistrementComponent }, 
+      { path : "connexion" , component : ConnexionComponent }, 
     ])
   ],
   providers: [],

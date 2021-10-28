@@ -18,6 +18,11 @@ import { Component , OnInit } from '@angular/core';
             <a routerLink="/enregistrement" class="nav-link">Créer un profil User</a>
           </li>
         </ul>
+        <ul class="navbar-nav ms-auto" >
+          <li class="nav-item">
+          <a routerLink="/connexion" class="nav-link">Connexion</a>
+          </li>
+        </ul>
       </nav>
       <router-outlet></router-outlet>
   </div>        `

@@ -1,0 +1,8 @@
+créer une nouveau composant 
+
+connexion 
+
+contient un formulaire avec 2 champs email / password 
+
+mettre un lien dans la barre de menu "connexion" => /connexion 
+

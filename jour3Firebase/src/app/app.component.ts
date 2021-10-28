@@ -17,7 +17,7 @@ export class AppComponent implements OnInit {
 
   public onClick(info : string){
     const article = { nom : info }
-    this.db.list("/articles").push(article)
+    this.db.list("/articles").push(article);
   }
 
   public ngOnInit(){

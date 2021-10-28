@@ -1,0 +1,96 @@
+typescript
+https://formation.webdevpro.net/typescript
+login : typescript
+passwd : microsoft
+
+angular
+https://formation.webdevpro.net/angular
+login : angular
+passwd : google
+
+https://github.com/webdevproformation/angular-3wa-sept21
+https://github.com/webdevproformation/angular-3wa-oct21
+
+
+// ---------------------  
+
+Firebase => json // SQL 
+
+// Angular / react / Vue JS =>   Firebase / API maison => MySQL / MongoDB 
+
+//                                      API Nodejs + Express =>
+//                                       https://expressjs.com/
+
+
+// logiciel avec une architecture 3 tiers 
+
+3 parties : front / back / base de données 
+
+// API => l'url pour l'appeler // methodes 
+
+// migrer le projet jour3Firebase => sur un hébergeur online 
+// la base données soit online 
+
+// très simple d'utilisation 
+
+// installé firebase => base de données 
+// npm i @angular/fire firebase 
+
+// identifiants SDK 
+
+// app.module => modules à initialiser pour faire fonctionner notre Firebase dans notre application 
+
+// CRUD avec Firebase  :
+// dans les composants :
+import { AngularFireDatabase } from "@angular/fire/compat/database";
+
+
+injection de dépendance 
+
+constructor( private db : AngularFireDatabase) { }
+
+
+// Create 
+// méthode de la class 
+db.list("/collection/table").push(object avec les valeurs à insérer)
+
+// Read All 
+db.list("/collection/table").valueChanges().subscribe( (list) => { // Type d'Observable => Subject
+    console.log(list)
+})
+
+// Read One 
+db.list("/collection/table/id").valueChanges() => Subject
+
+json-serveur => // MongoDB
+[ 
+    { 
+        id : "-Mn1LU3KuLK6_71i6vXI",
+        nom : "toto"
+        prenom : "toto"
+    },
+    { 
+        id : "-Mn1M_cSFdfsIHe3XBY0",
+        nom : "tata",
+        prenom : "toto"
+    }
+]
+
+Firebase 
+[
+    "-Mn1LU3KuLK6_71i6vXI" : {
+        nom : "toto"
+        prenom : "toto"
+    },
+    "-Mn1M_cSFdfsIHe3XBY0" : {
+        nom : "tata",
+        prenom : "toto"
+    }
+]
+
+Update 
+db.list("/collection/table/id").snapshotChanges()  // subject  
+db.list("/collection/table").update(id , {modification})  // subject  
+
+Delete 
+db.list("/collection/table").delete(id)

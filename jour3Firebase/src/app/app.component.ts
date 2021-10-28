@@ -5,10 +5,23 @@ import { AngularFireDatabase } from "@angular/fire/compat/database"
 @Component({
   selector: 'app-root',
   template: `
-              <h1>{{title}}</h1>
-              <input #info >
-              <button (click)="onClick(info.value)">créer</button>`,
-  styleUrls: ['./app.component.css']
+  <div class="container">
+    <header class="row">
+      <div class="offset-3 col-6">
+        <app-total></app-total>
+      </div>
+    </header>
+    <section class="row">
+      <div class="offset-3 col-6">
+        <app-sous-total></app-sous-total>
+      </div>
+    </section>
+    <section class="row">
+      <div class="offset-3 col-6">
+        <app-formulaire></app-formulaire>
+      </div>
+    </section>
+  </div>        `
 })
 export class AppComponent implements OnInit {
   public title : string = 'jour3Firebase';

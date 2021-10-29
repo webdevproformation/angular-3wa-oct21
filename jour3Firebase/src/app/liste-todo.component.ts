@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { AngularFireDatabase } from "@angular/fire/compat/database"
 import { map } from "rxjs/operators"
+import { AuthService } from "./auth.service"
 
 @Component({
   selector: 'app-liste-todo',
@@ -12,14 +13,14 @@ import { map } from "rxjs/operators"
       <option value="false">En Cours</option>
       <option value="true">Fini</option>
     </select>
-    <input type="submit" class="btn btn-outline-danger" value="suppr" (click)="onClickSuppr(todo.id)">
-    <input type="submit" class="btn btn-outline-warning ms-2" value="modif" (click)="onClickModif(todo.id , nom.value , status.value)">
+    <input type="submit" class="btn btn-outline-danger" value="suppr" (click)="onClickSuppr(todo.id)" *ngIf="auth.isLogged()">
+    <input type="submit" class="btn btn-outline-warning ms-2" value="modif" (click)="onClickModif(todo.id , nom.value , status.value)" *ngIf="auth.isLogged()">
   </form>
   `
 })
 export class ListeTodoComponent implements OnInit {
   public todos :any ;
-  constructor(private db : AngularFireDatabase) { }
+  constructor(private db : AngularFireDatabase , public auth : AuthService) { }
 
   public onClickSuppr(id : string){
     this.db.list(`/todos/${id}`).remove();

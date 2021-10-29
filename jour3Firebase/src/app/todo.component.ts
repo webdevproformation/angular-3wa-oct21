@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { AuthService } from "./auth.service"
 
 @Component({
   selector: 'app-todo',
@@ -8,7 +9,7 @@ import { Component, OnInit } from '@angular/core';
       <app-encours></app-encours>
     </div>
   </header>
-  <section class="row">
+  <section class="row" *ngIf="auth.isLogged()">
     <div class="offset-3 col-6">
       <app-formulaire-todo></app-formulaire-todo>
     </div>
@@ -24,7 +25,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class TodoComponent implements OnInit {
 
-  constructor() { }
+  constructor(public auth : AuthService) { }
 
   ngOnInit(): void {
   }

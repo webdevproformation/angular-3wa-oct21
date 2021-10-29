@@ -34,6 +34,7 @@ export class ListeResultatComponent implements OnInit {
     this.cocktail.subjRecherche$.subscribe( ( motRecherche ) => {
       this.recherche = motRecherche;
     } )
+    // rdv 15h25 bon café @ toute suite !!! 
 
     this.cocktail.subjRecherche$
     .pipe( 
@@ -42,6 +43,8 @@ export class ListeResultatComponent implements OnInit {
     .subscribe( (resultat :any) => 
           this.resultats = resultat.drinks
     )
+    // subject => permet d'envoyer des informations d'un composant vers un autre 
+    // SANS sans qu'ils soient parents 
 
     
     // pouvez afficher dans le composant liste-cocktail

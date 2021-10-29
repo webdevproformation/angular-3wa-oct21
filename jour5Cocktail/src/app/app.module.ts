@@ -13,6 +13,8 @@ import { PipeComponent } from './pipe/pipe.component';
 import { MorePipe } from './more.pipe';
 import { DateFrPipe } from './date-fr.pipe';
 import { DirectivePersonnaliseeComponent } from './directive-personnalisee/directive-personnalisee.component';
+import { ImageDirective } from './image.directive';
+import { BgColorDirective } from './bg-color.directive';
 
 const routes = [
   { path : "" , component : CocktailComponent},
@@ -30,7 +32,9 @@ const routes = [
     PipeComponent,
     MorePipe,
     DateFrPipe,
-    DirectivePersonnaliseeComponent
+    DirectivePersonnaliseeComponent,
+    ImageDirective,
+    BgColorDirective
   ],
   imports: [
     BrowserModule,

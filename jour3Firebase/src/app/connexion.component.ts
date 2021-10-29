@@ -30,7 +30,7 @@ export class ConnexionComponent implements OnInit {
       this.auth.signInWithEmailAndPassword(email.trim() , password)
         .then( rep => {
           localStorage.setItem("auth", JSON.stringify(rep.user) )
-          window.location.href = "/";
+          window.location.href = window.location.href;
         } )
         .catch( ex => console.log(ex.message) )
 

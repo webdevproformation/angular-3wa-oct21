@@ -25,9 +25,10 @@ export class ConnexionBtnGoogleComponent implements OnInit {
     this.auth.signInWithPopup(provider)
     .then( ( rep ) => {
       localStorage.setItem("auth", JSON.stringify(rep.user) )
-      window.location.href = "/";
+      window.location.href = window.location.href;
     })
     .catch( ex => console.log(ex))
+    // 10h52 ! mise en ligne sur un hébergeur de notre projet 
   }
 
   constructor( private auth: AngularFireAuth) { }

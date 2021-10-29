@@ -1,0 +1,32 @@
+stopper le server de développement
+
+builder le projet => tout le code ts + tout le css que l'on utilisé 
+=> builder (bundle)
+=> fichier qui va contenir tout notre code de manière la plus compact et rapide à exécuter pour le navigateur 
+
+=> ng build --prod 
+=> variable d'environnement bien mettre dans le fichier environment.prod.ts 
+
+=> déployer sur un hébergeur 
+
+github page 
+
+-------------------
+
+1 répository sur github 
+
+2 mise en place dépot local + lien vers le repo github
+
+git init
+git add *
+git commit -m "mise en ligne"
+git branch -M main
+git remote add origin https://github.com/webdevproformation/demo-3wa.git
+
+3 installer une librairie qui permet de mettre en ligne sur github page facilement 
+npm i -g angular-cli-ghpages
+
+4 ng build --base-href="https://webdevproformation.github.io/demo-3wa/"
+
+5 ngh --dir dist/jour3Firebase
+

@@ -1,0 +1,54 @@
+cd .. 
+ng new jour5Cocktail
+
+// api online pour remplir notre application 
+
+//
+// https://www.thecocktaildb.com/api.php
+
+// json liste de cocktail 
+
+// https://www.thecocktaildb.com/api/json/v1/1/search.php?s=margarita
+
+
+<input> => rhum / 
+
+<ul>
+    <li></li> 
+    <li></li> 
+    <li></li> 
+</ul>
+
+créer deux composants 
+    ng g c form-recherche
+    form-recherche
+        <input type="text">
+    ng g c liste-resultat
+    liste-resultat
+        <ul>
+        </ul>
+
+créer un service 
+    ng g s cocktail
+
+    import { HttpClient } from "@angular/common/http"
+
+    class CocktailService{
+
+        private url : string = "https://www.thecocktaildb.com/api/json/v1/1/search.php?s=margarita"
+
+        public constructor(private req : HttpClient){}
+
+        public getCocktail<T>() : Array<T>{
+           return this.req.get(this.url)
+        }
+    }
+
+app.module.ts 
+
+    import{ HttpClientModule } from "@angular/common/http"
+
+@ngModule
+    imports: [ 
+        HttpClientModule
+    ]

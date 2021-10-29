@@ -40,7 +40,7 @@ export class AppComponent implements OnInit {
     $event.preventDefault();
     localStorage.removeItem("auth");
     this.auth.signOut();
-    window.location.href = "/";
+    window.location.href = window.location.href;
   }
   public constructor(public authService :AuthService , private auth : AngularFireAuth ){}
 }

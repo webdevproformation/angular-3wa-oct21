@@ -9,9 +9,12 @@ import { FormRechercheComponent } from './form-recherche/form-recherche.componen
 import { ListeResultatComponent } from './liste-resultat/liste-resultat.component';
 import { MenuComponent } from './menu/menu.component';
 import { CocktailComponent } from './cocktail/cocktail.component';
+import { PipeComponent } from './pipe/pipe.component';
+import { MorePipe } from './more.pipe';
 
 const routes = [
-  {path : "" , component : CocktailComponent}
+  { path : "" , component : CocktailComponent},
+  { path : "pipe" , component : PipeComponent }
 ]
 
 @NgModule({
@@ -20,7 +23,9 @@ const routes = [
     FormRechercheComponent,
     ListeResultatComponent,
     MenuComponent,
-    CocktailComponent
+    CocktailComponent,
+    PipeComponent,
+    MorePipe
   ],
   imports: [
     BrowserModule,
@@ -28,7 +33,8 @@ const routes = [
     FormsModule,
     RouterModule.forRoot(routes)
   ],
-  providers: [],
+  providers: [
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

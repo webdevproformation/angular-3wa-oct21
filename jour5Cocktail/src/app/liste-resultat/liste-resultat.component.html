@@ -1,9 +1,9 @@
 <h2>liste des résultats pour {{ recherche }}</h2>
 <div class="resultats">
     <article *ngFor="let resultat of resultats">
-        <h2>{{ resultat.strDrink }}</h2>
+        <h2>{{ resultat.strDrink | more: 15 }}</h2>
         <img [src]="resultat.strDrinkThumb" [alt]="resultat.strDrink">
-        <p>{{ resultat.strInstructions }}</p>
+        <p>{{ resultat.strInstructions | more: 80 }}</p>
         <ul [innerHTML]="ingrediants(resultat)" >
         </ul>
        <!--  <pre>{{ resultat | json }}</pre> --><!-- permet d'afficher le contenu de la variable | json -->

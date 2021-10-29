@@ -1,0 +1,21 @@
+<h2>Utilisation de pipe natif string</h2>
+<p>{{ data.titre | uppercase }}</p>
+<p>{{ data.titre | lowercase }}</p>
+<p>{{ data.titre | titlecase }}</p>
+
+<h2>Debuggage</h2>
+<pre>{{ data | json }}</pre>
+
+<h2>Utilisation de pipe natif chiffres</h2>
+<p>{{ data.prix | currency:"EUR" }}</p>
+<p>{{ '3221.755556' | currency:"EUR":"symbol":"5.0-4" }}</p>
+
+<h2>Utilisation de pipe natif date</h2>
+<p>{{ data.date | date:'dd/MM/yyyy'}}</p>
+
+<h2>pipe personnalisé</h2>
+<ul>
+    <li>ng g pipe more</li>
+    <li>{{ data.p | more }}</li>
+    <li>{{ data.p | more:400 }}</li>
+</ul>

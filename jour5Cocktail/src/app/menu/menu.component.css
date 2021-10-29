@@ -1,0 +1,16 @@
+ul{
+    display: flex;
+    list-style: none;
+    padding: 0;
+}
+a{
+    text-decoration: none;
+    color:cornflowerblue;
+}
+li{
+    margin-right: 20px;
+}
+
+li.active a{
+    color:crimson;
+}

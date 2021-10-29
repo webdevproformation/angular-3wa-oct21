@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { NgModel } from '@angular/forms';
 
 @Component({
   selector: 'app-form-recherche',
@@ -10,6 +11,10 @@ export class FormRechercheComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
+  }
+
+  public onKeyUp(recherche :NgModel){
+    console.log(recherche)
   }
 
 }

@@ -13,8 +13,8 @@ export class ListeResultatComponent implements OnInit {
   constructor(private cocktail : CocktailService) { }
 
   public ingrediants(cocktail :any){
-    let resultat = ""
-    for(let i = 1; i <=15 ; i++){
+    let resultat = "";
+    for(let i = 1; i <= 15 ; i++){
       const ingrediant = `strIngredient${i}`;
       const dose = `strMeasure${i}`;
       if(cocktail[ingrediant] != null && cocktail[dose] != null){

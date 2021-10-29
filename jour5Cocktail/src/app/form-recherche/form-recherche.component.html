@@ -1,1 +1,9 @@
-<p>form-recherche works!</p>
+<h1>Recherche un cocktail : </h1>
+<input 
+    text="text" 
+    name="recherche" 
+    placeholder="cocktail recherché" 
+    ngModel 
+    #recherche="ngModel"
+    (keyup)="onKeyUp(recherche.value)"
+    >

@@ -21,6 +21,7 @@ import { EnregistrementComponent } from './enregistrement.component';
 import { ConnexionComponent } from './connexion.component';
 
 import { AuthService } from "./auth.service";
+import { AuthGuardService } from "./auth-guard.service";
 
 @NgModule({
   declarations: [
@@ -45,7 +46,7 @@ import { AuthService } from "./auth.service";
     RouterModule.forRoot([
       { path : "" , component : BudgetComponent }, 
       { path : "todo" , component : TodoComponent }, 
-      { path : "enregistrement" , component : EnregistrementComponent }, 
+      { path : "enregistrement" , component : EnregistrementComponent , canActivate : [ AuthGuardService ] }, 
       { path : "connexion" , component : ConnexionComponent }, 
     ])
   ],

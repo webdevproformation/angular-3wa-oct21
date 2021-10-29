@@ -1,1 +1,11 @@
-<p>liste-resultat works!</p>
+<div class="resultats">
+    <article *ngFor="let resultat of resultats">
+        <h2>{{ resultat.strDrink }}</h2>
+        <img [src]="resultat.strDrinkThumb" [alt]="resultat.strDrink">
+        <p>{{ resultat.strInstructions }}</p>
+        <ul [innerHTML]="ingrediants(resultat)" >
+        </ul>
+       <!--  <pre>{{ resultat | json }}</pre> --><!-- permet d'afficher le contenu de la variable | json -->
+    </article>
+</div>
+

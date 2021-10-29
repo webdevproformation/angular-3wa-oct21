@@ -22,6 +22,7 @@ import { ConnexionComponent } from './connexion.component';
 
 import { AuthService } from "./auth.service";
 import { AuthGuardService } from "./auth-guard.service";
+import { ConnexionBtnGoogleComponent } from './connexion-btn-google.component';
 
 @NgModule({
   declarations: [
@@ -36,7 +37,8 @@ import { AuthGuardService } from "./auth-guard.service";
     FormulaireTodoComponent,
     ListeTodoComponent,
     EnregistrementComponent,
-    ConnexionComponent
+    ConnexionComponent,
+    ConnexionBtnGoogleComponent
   ],
   imports: [
     BrowserModule,

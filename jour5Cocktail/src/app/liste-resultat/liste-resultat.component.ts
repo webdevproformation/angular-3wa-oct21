@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { CocktailService } from "../cocktail.service";
+import { mergeMap } from "rxjs/operators";
 
 @Component({
   selector: 'app-liste-resultat',
@@ -34,12 +35,13 @@ export class ListeResultatComponent implements OnInit {
       this.recherche = motRecherche;
     } )
 
-    this.cocktail.subjRecherche$.subscribe( ( motRecherche ) => {
-      this.cocktail.getCocktail(motRecherche)
-        .subscribe( (resultat :any) => 
-            this.resultats = resultat.drinks
-        )
-    } )
+    this.cocktail.subjRecherche$
+    .pipe( 
+      mergeMap( ( motRecherche ) => this.cocktail.getCocktail(motRecherche) )
+    )
+    .subscribe( (resultat :any) => 
+          this.resultats = resultat.drinks
+    )
 
     
     // pouvez afficher dans le composant liste-cocktail

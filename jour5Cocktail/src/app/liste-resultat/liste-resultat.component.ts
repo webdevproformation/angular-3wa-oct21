@@ -9,6 +9,7 @@ import { CocktailService } from "../cocktail.service";
 export class ListeResultatComponent implements OnInit {
 
   public resultats : Array<any> = [];
+  public recherche : string = "margarita";
 
   constructor(private cocktail : CocktailService) { }
 
@@ -29,8 +30,15 @@ export class ListeResultatComponent implements OnInit {
     .subscribe( (resultat :any) => 
         this.resultats = resultat.drinks
     )
-    this.cocktail.subjRecherche$.subscribe( ( motRecherche) => {
-      console.log(motRecherche);
+    this.cocktail.subjRecherche$.subscribe( ( motRecherche ) => {
+      this.recherche = motRecherche;
+    } )
+
+    this.cocktail.subjRecherche$.subscribe( ( motRecherche ) => {
+      this.cocktail.getCocktail(motRecherche)
+        .subscribe( (resultat :any) => 
+            this.resultats = resultat.drinks
+        )
     } )
 
     

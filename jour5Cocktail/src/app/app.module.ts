@@ -11,6 +11,7 @@ import { MenuComponent } from './menu/menu.component';
 import { CocktailComponent } from './cocktail/cocktail.component';
 import { PipeComponent } from './pipe/pipe.component';
 import { MorePipe } from './more.pipe';
+import { DateFrPipe } from './date-fr.pipe';
 
 const routes = [
   { path : "" , component : CocktailComponent},
@@ -25,7 +26,8 @@ const routes = [
     MenuComponent,
     CocktailComponent,
     PipeComponent,
-    MorePipe
+    MorePipe,
+    DateFrPipe
   ],
   imports: [
     BrowserModule,

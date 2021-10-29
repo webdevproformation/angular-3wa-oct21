@@ -19,3 +19,17 @@
     <li>{{ data.p | more }}</li>
     <li>{{ data.p | more:400 }}</li>
 </ul>
+<h2> pipe pour les observables => subscribe pour vous  | async </h2>
+
+<ul>
+    <li *ngFor="let j of jours() | async">{{ j }}</li>
+</ul>
+
+
+<!-- 
+    créer un pipe convertir une chaine de caractère =>"11/12/2021" => date de français 11 décembre 2021
+    date_fr 
+-->
+
+<h2> exo </h2>
+<p>{{ '25/12/2021' | dateFr }} - {{ '01/02/2019' | dateFr }}</p>

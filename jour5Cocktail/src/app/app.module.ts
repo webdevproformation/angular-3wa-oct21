@@ -12,10 +12,12 @@ import { CocktailComponent } from './cocktail/cocktail.component';
 import { PipeComponent } from './pipe/pipe.component';
 import { MorePipe } from './more.pipe';
 import { DateFrPipe } from './date-fr.pipe';
+import { DirectivePersonnaliseeComponent } from './directive-personnalisee/directive-personnalisee.component';
 
 const routes = [
   { path : "" , component : CocktailComponent},
-  { path : "pipe" , component : PipeComponent }
+  { path : "pipe" , component : PipeComponent },
+  { path : "directive" , component : DirectivePersonnaliseeComponent },
 ]
 
 @NgModule({
@@ -27,7 +29,8 @@ const routes = [
     CocktailComponent,
     PipeComponent,
     MorePipe,
-    DateFrPipe
+    DateFrPipe,
+    DirectivePersonnaliseeComponent
   ],
   imports: [
     BrowserModule,

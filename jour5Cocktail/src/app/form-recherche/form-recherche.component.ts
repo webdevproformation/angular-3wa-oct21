@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { NgModel } from '@angular/forms';
+import { CocktailService } from '../cocktail.service';
 
 @Component({
   selector: 'app-form-recherche',
@@ -8,13 +8,13 @@ import { NgModel } from '@angular/forms';
 })
 export class FormRechercheComponent implements OnInit {
 
-  constructor() { }
+  constructor( private cocktail : CocktailService) { }
 
   ngOnInit(): void {
   }
 
-  public onKeyUp(recherche :NgModel){
-    console.log(recherche)
+  public onKeyUp(recherche :string){
+    this.cocktail.subjRecherche$.next(recherche)
   }
 
 }

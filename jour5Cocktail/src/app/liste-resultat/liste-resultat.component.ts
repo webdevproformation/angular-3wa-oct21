@@ -29,6 +29,9 @@ export class ListeResultatComponent implements OnInit {
     .subscribe( (resultat :any) => 
         this.resultats = resultat.drinks
     )
+    this.cocktail.subjRecherche$.subscribe( ( motRecherche) => {
+      console.log(motRecherche);
+    } )
 
     
     // pouvez afficher dans le composant liste-cocktail
